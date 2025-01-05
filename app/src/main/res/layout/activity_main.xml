@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".view.activity.MainActivity">
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/viewFinder"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/captureImage"
+        app:layout_constraintDimensionRatio="3:4"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/captureImage"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:alpha="0.7"
+        android:contentDescription="Take Photo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewFinder"
+        app:srcCompat="@drawable/ic_capture" />
+
+    <ImageView
+        android:id="@+id/history"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:alpha="0.7"
+        android:contentDescription="Go to History"
+        app:layout_constraintBottom_toBottomOf="@+id/captureImage"
+        app:layout_constraintEnd_toEndOf="@+id/viewFinder"
+        app:layout_constraintStart_toEndOf="@+id/captureImage"
+        app:layout_constraintTop_toTopOf="@+id/captureImage"
+        app:srcCompat="@drawable/baseline_history_24"
+        app:tint="@color/white" />
+
+    <ImageView
+        android:id="@+id/galleryBtn"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:alpha="0.7"
+        android:contentDescription="Go to Gallery"
+        app:layout_constraintBottom_toBottomOf="@+id/captureImage"
+        app:layout_constraintEnd_toStartOf="@+id/captureImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/captureImage"
+        app:srcCompat="@drawable/ic_add_thumbnail"
+        app:tint="@color/white" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
